@@ -1,32 +1,8 @@
 #!/usr/bin/python3
-import sys
+from factors_functions import *
+
+if __name__ == '__main__':
 
 
 
-def factorize(n):
-
-    for i in range(2, n):
-
-        if n % i == 0:
-
-            return (i, n // i)
-
-    return (n, 1)
-
-
-
-def main():
-
-    for line in sys.stdin:
-
-        n = int(line)
-
-        p, q = factorize(n)
-
-        print(f"{n}={p}*{q}")
-
-
-
-if __name__ == "__main__":
-
-    main()
+    print(unix_time(print_factors))
